@@ -21,10 +21,5 @@ def userTest():
 def varTest(name):
     return 'variable value is %s!' % name
 
-@app.route('/api/custom/response')
-def customResponse():
-    headers = {"Content-Type" : "application/json" }
-    return make_response('Hello World!', 200, headers=headers)
-
 if __name__ == '__main__':
     app.run(debug = True)
